@@ -32,9 +32,8 @@ class AppServiceProvider extends ServiceProvider
         $results = DB::select(DB::raw("select version()"));
         $mysql_version = $results[0]->{'version()'};
         if ($mysql_version <= '5.7') {
-             Schema::defaultStringLength(191);
+             Schema::defaultStringLength(255);
         }
-//        Schema::defaultStringLength(191);
         Redis::enableEvents();
     }
 }
