@@ -20,7 +20,7 @@ Route::get('/', function () {
         $mariadb_version = $mysql_version;
         $mysql_version = '';
     }
-    dd($mysql_version >= '5.6');
+    dd($mysql_version <= '5.6');
     return view('welcome');
 });
 
