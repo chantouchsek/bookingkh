@@ -22,7 +22,7 @@ class CreateMediaTable extends Migration
             $table->string('mime_type')->nullable();
             $table->string('disk');
             $table->unsignedInteger('size');
-            if ($mysql_version <= '5.6') {
+            if ($mysql_version <= '5.7') {
                 $table->longText('manipulations');
                 $table->longText('custom_properties');
                 $table->longText('responsive_images');
