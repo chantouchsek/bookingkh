@@ -12,15 +12,6 @@
 */
 
 Route::get('/', function () {
-    $results = DB::select( DB::raw("select version()") );
-    $mysql_version =  $results[0]->{'version()'};
-    $mariadb_version = '';
-
-    if (strpos($mysql_version, 'Maria') !== false) {
-        $mariadb_version = $mysql_version;
-        $mysql_version = '';
-    }
-    dd($mysql_version <= '5.7');
     return view('welcome');
 });
 
