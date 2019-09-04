@@ -35,10 +35,10 @@ return [
         'defaults' => [
             'title' => 'Over 9000 Thousand!', // set false to total remove
             'description' => 'For those who helped create the Genki Dama', // set false to total remove
-            'url' => false, // Set null for using Url::current(), set false to total remove
-            'type' => false,
-            'site_name' => false,
-            'images' => [],
+            'url' => true, // Set null for using Url::current(), set false to total remove
+            'type' => true,
+            'site_name' => true,
+            'images' => []
         ],
     ],
     'twitter' => [
